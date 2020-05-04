@@ -93,7 +93,8 @@ on a.facid=b.facid
 join country_club.Members as c
 on a.memid=c.memid
 where date(starttime)=date('2012-09-14')
-having Cost>30;
+having Cost>30
+order by Cost;
 
 /* Q9: This time, produce the same result as in Q8, but using a subquery. */
 Select a.*
@@ -105,7 +106,8 @@ on a.facid=b.facid
 join country_club.Members as c
 on a.memid=c.memid
 where date(starttime)=date('2012-09-14')) as a
-where Cost>30;
+where Cost>30
+order by Cost;
 
 
 /* Q10: Produce a list of facilities with a total revenue less than 1000.
